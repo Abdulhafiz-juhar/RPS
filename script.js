@@ -14,8 +14,6 @@ let getComputerChoice = () => {
 
     return computerGuess;
 }
-let computerSelection = getComputerChoice();
-
 
 let getPlayerChoice = () => {
     let playerGuess;
@@ -35,4 +33,6 @@ let getPlayerChoice = () => {
         return 'wrong input';
     }
 }
-let playerSelection = getPlayerChoice();
+
+const playerSelection = getPlayerChoice();
+const computerSelection = getComputerChoice();

@@ -15,3 +15,24 @@ let getComputerChoice = () => {
     return computerGuess;
 }
 let computerSelection = getComputerChoice();
+
+
+let getPlayerChoice = () => {
+    let playerGuess;
+    let playerGuessInitial = 
+    prompt('Please enter your choice (i.e. It must be either rock, paper, or scissor)');
+    if(playerGuessInitial) {
+        playerGuess = playerGuessInitial.toLowerCase();
+    }
+    else {
+        return 'No input entered';
+    }
+
+    if (playerGuess === 'rock' || playerGuess === 'paper' || playerGuess === 'scissor') {
+        return playerGuess;
+    }
+    else {
+        return 'wrong input';
+    }
+}
+let playerSelection = getPlayerChoice();

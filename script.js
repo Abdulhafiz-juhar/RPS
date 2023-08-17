@@ -34,57 +34,75 @@ let getPlayerChoice = () => {
     }
 }
 const resultsContainer = document.querySelector('.results');
-const results = document.createElement('p');
-resultsContainer.appendChild(results);
+
+
 
 function playRound(playerSelection, computerSelection) {
     if(playerSelection === 'rock') {
         if (computerSelection === 'rock') {
-            results.textContent = "It's a Draw"
+            const results = document.createElement('p');
+            results.textContent = "It's a Draw";
+            resultsContainer.appendChild(results);
             console.log("It's a Draw");
             return 'draw';
         }
         else if (computerSelection === 'paper') {
-            results.textContent = "You Lose! Paper beats Rock"
+            const results = document.createElement('p');
+            results.textContent = "You Lose! Paper beats Rock";
+            resultsContainer.appendChild(results);
             console.log("You Lose! Paper beats Rock");
             return 'computer';
         }
         else if (computerSelection === 'scissor') {
-            results.textContent = "You Win! rock beats scissor"
+            const results = document.createElement('p');
+            results.textContent = "You Win! rock beats scissor";
+            resultsContainer.appendChild(results);
             console.log("You Win! rock beats scissor");
             return 'player';
         }
     }
     else if (playerSelection === 'paper') {
         if (computerSelection === 'rock') {
-            results.textContent = "You Win! paper beats rock"
+            const results = document.createElement('p');
+            results.textContent = "You Win! paper beats rock";
+            resultsContainer.appendChild(results);
             console.log("You Win! paper beats rock");
             return 'player';
         }
         else if (computerSelection === 'paper') {
-            results.textContent = "It's a Draw"
+            const results = document.createElement('p');
+            results.textContent = "It's a Draw";
+            resultsContainer.appendChild(results);
             console.log("It's a Draw");
             return 'draw';
         }
         else if (computerSelection === 'scissor') {
-            results.textContent = "You Lose! scissor beats paper"
+            const results = document.createElement('p');
+            results.textContent = "You Lose! scissor beats paper";
+            resultsContainer.appendChild(results);
             console.log("You Lose! scissor beats paper");
             return 'computer';
         }
     }
     else if (playerSelection === 'scissor') {
         if (computerSelection === 'rock') {
-            results.textContent = "You Lose! rock beats scissor"
+            const results = document.createElement('p');
+            results.textContent = "You Lose! rock beats scissor";
+            resultsContainer.appendChild(results);
             console.log("You Lose! rock beats scissor");
             return 'computer';
         }
         else if (computerSelection === 'paper') {
-            results.textContent = "You Win! scissor beats paper"
+            const results = document.createElement('p');
+            results.textContent = "You Win! scissor beats paper";
+            resultsContainer.appendChild(results);
             console.log("You Win! scissor beats paper");
             return 'player';
         }
         else if (computerSelection === 'scissor') {
-            results.textContent = "It's a Draw"
+            const results = document.createElement('p');
+            results.textContent = "It's a Draw";
+            resultsContainer.appendChild(results);
             console.log("It's a Draw");
             return 'draw';
         }

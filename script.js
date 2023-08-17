@@ -94,7 +94,12 @@ function playRound(playerSelection, computerSelection) {
 // scissor.textContent = 'scissor';
 // container.appendChild(scissor);
 
+function userInput(e) {
+    return this.textContent
+}
 
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => button.addEventListener('click', userInput))
 
 
 // console.log(playRound(getPlayerChoice(), getComputerChoice()));

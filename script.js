@@ -33,46 +33,58 @@ let getPlayerChoice = () => {
         return 'wrong input';
     }
 }
+const resultsContainer = document.querySelector('.results');
+const results = document.createElement('p');
+resultsContainer.appendChild(results);
 
 function playRound(playerSelection, computerSelection) {
     if(playerSelection === 'rock') {
         if (computerSelection === 'rock') {
+            results.textContent = "It's a Draw"
             console.log("It's a Draw");
             return 'draw';
         }
         else if (computerSelection === 'paper') {
+            results.textContent = "You Lose! Paper beats Rock"
             console.log("You Lose! Paper beats Rock");
             return 'computer';
         }
         else if (computerSelection === 'scissor') {
+            results.textContent = "You Win! rock beats scissor"
             console.log("You Win! rock beats scissor");
             return 'player';
         }
     }
     else if (playerSelection === 'paper') {
         if (computerSelection === 'rock') {
+            results.textContent = "You Win! paper beats rock"
             console.log("You Win! paper beats rock");
             return 'player';
         }
         else if (computerSelection === 'paper') {
+            results.textContent = "It's a Draw"
             console.log("It's a Draw");
             return 'draw';
         }
         else if (computerSelection === 'scissor') {
+            results.textContent = "You Lose! scissor beats paper"
             console.log("You Lose! scissor beats paper");
             return 'computer';
         }
     }
     else if (playerSelection === 'scissor') {
         if (computerSelection === 'rock') {
+            results.textContent = "You Lose! rock beats scissor"
             console.log("You Lose! rock beats scissor");
             return 'computer';
         }
         else if (computerSelection === 'paper') {
+            results.textContent = "You Win! scissor beats paper"
             console.log("You Win! scissor beats paper");
             return 'player';
         }
         else if (computerSelection === 'scissor') {
+            results.textContent = "It's a Draw"
             console.log("It's a Draw");
             return 'draw';
         }
@@ -95,14 +107,15 @@ function playRound(playerSelection, computerSelection) {
 // container.appendChild(scissor);
 
 function userInput(e) {
-    return this.textContent
+    let playerSelect = this.textContent.toLowerCase();
+    console.log(playRound(playerSelect, getComputerChoice()));
 }
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', userInput))
 
 
-// console.log(playRound(getPlayerChoice(), getComputerChoice()));
+
 
 // let game = (playRound, getPlayerChoice, getComputerChoice) => {
 

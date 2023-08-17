@@ -123,14 +123,39 @@ function playRound(playerSelection, computerSelection) {
 // const scissor = document.createElement('button');
 // scissor.textContent = 'scissor';
 // container.appendChild(scissor);
-
+let playerScore =0, computerScore =0, roundWinner;
 function userInput(e) {
     let playerSelect = this.textContent.toLowerCase();
-    console.log(playRound(playerSelect, getComputerChoice()));
-}
+    roundWinner = playRound(playerSelect, getComputerChoice());
+
+    if(playerScore < 5 && computerScore < 5) {
+        if (roundWinner === 'player') {
+            ++playerScore;
+        }
+        else if (roundWinner === 'computer') {
+            ++computerScore;
+        }
+        console.log('Player: ' + playerScore);
+        console.log('Computer: ' + computerScore);
+        } 
+    if(playerScore === 5 || computerScore === 5) {
+        buttons.forEach(button => button.removeEventListener('click', userInput))
+            if(computerScore > playerScore) {
+                console.log('Game Over, You Lost!');
+            }
+            else if (computerScore < playerScore) {
+                console.log('Congratulations, You Won!');
+            }
+            else if (computerScore === playerScore) {
+                console.log('Its a Tie!');
+            }
+        }
+    } 
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', userInput))
+
+
 
 
 

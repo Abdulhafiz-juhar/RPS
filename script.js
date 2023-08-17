@@ -123,8 +123,13 @@ function playRound(playerSelection, computerSelection) {
 // const scissor = document.createElement('button');
 // scissor.textContent = 'scissor';
 // container.appendChild(scissor);
-let playerScore =0, computerScore =0, roundWinner;
+let playerScore =0, computerScore =0, round =1, roundWinner;
 function userInput(e) {
+
+    const roundText = document.createElement('p');
+    roundText.textContent = `Round: ${round}`;
+    resultsContainer.appendChild(roundText);
+
     let playerSelect = this.textContent.toLowerCase();
     roundWinner = playRound(playerSelect, getComputerChoice());
 
@@ -137,18 +142,30 @@ function userInput(e) {
         }
         console.log('Player: ' + playerScore);
         console.log('Computer: ' + computerScore);
+        ++round;
+        
+
+        const playerScoreText = document.createElement('p');
+        playerScoreText.textContent = `Player: ${playerScore}`;
+        resultsContainer.appendChild(playerScoreText);
+
+        const computerScoreText = document.createElement('p');
+        computerScoreText.textContent = `Computer: ${computerScore}`;
+        resultsContainer.appendChild(computerScoreText);
         } 
     if(playerScore === 5 || computerScore === 5) {
-        buttons.forEach(button => button.removeEventListener('click', userInput))
+        buttons.forEach(button => button.removeEventListener('click', userInput));
+        const gameStatus = document.createElement('p');
             if(computerScore > playerScore) {
-                console.log('Game Over, You Lost!');
+                gameStatus.textContent = 'Game Over, You Lost!';
             }
             else if (computerScore < playerScore) {
-                console.log('Congratulations, You Won!');
+                gameStatus.textContent = 'Congratulations, You Won!';
             }
             else if (computerScore === playerScore) {
-                console.log('Its a Tie!');
+                gameStatus.textContent = 'Its a Tie!';
             }
+            resultsContainer.appendChild(gameStatus);
         }
     } 
 

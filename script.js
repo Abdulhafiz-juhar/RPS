@@ -159,40 +159,4 @@ function userInput(e) {
     } 
 
 const buttons = document.querySelectorAll('button');
-buttons.forEach(button => button.addEventListener('click', userInput))
-
-
-
-
-
-
-// let game = (playRound, getPlayerChoice, getComputerChoice) => {
-
-//     let computerScoreCount = 0, playerScoreCount = 0;
-//     let roundWinner;
-//     for(let i = 1; i <= 5; i++) {
-//         console.log('Round ' + i)
-//         const playerSelection = getPlayerChoice();
-//         const computerSelection = getComputerChoice();
-//         roundWinner = playRound(playerSelection, computerSelection);
-//         if (roundWinner === 'player') {
-//             ++playerScoreCount;
-//         }
-//         else if (roundWinner === 'computer') {
-//             ++computerScoreCount;
-//         }
-//         console.log('Player: ' + playerScoreCount);
-//         console.log('Computer: ' + computerScoreCount);
-//     }
-
-//     if(computerScoreCount > playerScoreCount) {
-//         return 'Game Over, You Lost!';
-//     }
-//     else if (computerScoreCount < playerScoreCount) {
-//         return 'Congratulations, You Won!'
-//     }
-//     else if (computerScoreCount === playerScoreCount) {
-//         return 'Its a Tie!';
-//     }
-//   }
-// console.log(game(playRound,getPlayerChoice,getComputerChoice));
+buttons.forEach(button => button.addEventListener('click', userInput));

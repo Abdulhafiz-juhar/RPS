@@ -43,21 +43,18 @@ function playRound(playerSelection, computerSelection) {
             const results = document.createElement('p');
             results.textContent = "It's a Draw";
             resultsContainer.appendChild(results);
-            console.log("It's a Draw");
             return 'draw';
         }
         else if (computerSelection === 'paper') {
             const results = document.createElement('p');
             results.textContent = "You Lose! Paper beats Rock";
             resultsContainer.appendChild(results);
-            console.log("You Lose! Paper beats Rock");
             return 'computer';
         }
         else if (computerSelection === 'scissor') {
             const results = document.createElement('p');
             results.textContent = "You Win! rock beats scissor";
             resultsContainer.appendChild(results);
-            console.log("You Win! rock beats scissor");
             return 'player';
         }
     }
@@ -66,21 +63,18 @@ function playRound(playerSelection, computerSelection) {
             const results = document.createElement('p');
             results.textContent = "You Win! paper beats rock";
             resultsContainer.appendChild(results);
-            console.log("You Win! paper beats rock");
             return 'player';
         }
         else if (computerSelection === 'paper') {
             const results = document.createElement('p');
             results.textContent = "It's a Draw";
             resultsContainer.appendChild(results);
-            console.log("It's a Draw");
             return 'draw';
         }
         else if (computerSelection === 'scissor') {
             const results = document.createElement('p');
             results.textContent = "You Lose! scissor beats paper";
             resultsContainer.appendChild(results);
-            console.log("You Lose! scissor beats paper");
             return 'computer';
         }
     }
@@ -89,21 +83,18 @@ function playRound(playerSelection, computerSelection) {
             const results = document.createElement('p');
             results.textContent = "You Lose! rock beats scissor";
             resultsContainer.appendChild(results);
-            console.log("You Lose! rock beats scissor");
             return 'computer';
         }
         else if (computerSelection === 'paper') {
             const results = document.createElement('p');
             results.textContent = "You Win! scissor beats paper";
             resultsContainer.appendChild(results);
-            console.log("You Win! scissor beats paper");
             return 'player';
         }
         else if (computerSelection === 'scissor') {
             const results = document.createElement('p');
             results.textContent = "It's a Draw";
             resultsContainer.appendChild(results);
-            console.log("It's a Draw");
             return 'draw';
         }
     }
@@ -140,8 +131,6 @@ function userInput(e) {
         else if (roundWinner === 'computer') {
             ++computerScore;
         }
-        console.log('Player: ' + playerScore);
-        console.log('Computer: ' + computerScore);
         ++round;
         
 

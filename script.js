@@ -80,10 +80,24 @@ function playRound(playerSelection, computerSelection) {
 }
 
 //three buttons for selection
+// const container = document.querySelector('.container');
+
+// const rock = document.createElement('button');
+// rock.textContent = 'Rock';
+// container.appendChild(rock);
+
+// const paper = document.createElement('button');
+// paper.textContent = 'Paper';
+// container.appendChild(paper);
+
+// const scissor = document.createElement('button');
+// scissor.textContent = 'scissor';
+// container.appendChild(scissor);
 
 
 
-console.log(playRound(getPlayerChoice(), getComputerChoice()));
+
+// console.log(playRound(getPlayerChoice(), getComputerChoice()));
 
 // let game = (playRound, getPlayerChoice, getComputerChoice) => {
 

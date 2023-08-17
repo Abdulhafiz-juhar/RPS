@@ -79,6 +79,12 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+//three buttons for selection
+
+
+
+console.log(playRound(getPlayerChoice(), getComputerChoice()));
+
 // let game = (playRound, getPlayerChoice, getComputerChoice) => {
 
 //     let computerScoreCount = 0, playerScoreCount = 0;
